@@ -23,6 +23,7 @@ body {
     margin: 25px;
     box-sizing: border-box;
     border-radius: 15px;
+    z-index: 2;
 }
 
 .contact-form {
@@ -207,8 +208,10 @@ body {
     bottom: 10px;
     font-size: 11px;
     text-align: center;
+    z-index: 1;
 }
 
 .attribution a {
+    cursor: pointer;
     color: hsl(228, 45%, 44%);
 }
