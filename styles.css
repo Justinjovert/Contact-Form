@@ -117,6 +117,9 @@ body {
     margin: 0;
 }
 
+.query-option input:focus {
+    outline: 1px solid hsl(169, 82%, 27%);
+  }
 
 .selected-query{
     background-color: hsl(148, 38%, 91%);
@@ -153,6 +156,10 @@ body {
     margin-right: 20px;
     cursor: pointer;
 }
+.agreement input:focus {
+   outline: 1px solid hsl(169, 82%, 27%);
+}
+
 
 .agreement input:checked {
     accent-color: hsl(169, 82%, 27%);
