@@ -1,3 +1,12 @@
+//Show success alert
+const successAlert = document.querySelector('.success-alert')
+const showAlert = () => {
+      successAlert.style.display = 'block'
+}
+successAlert.addEventListener('click', () => {
+      successAlert.style.display = 'none'
+})
+
 
 //Creates a span as an error message
 const createErrorMessage = (olderSibling) => {
@@ -66,7 +75,7 @@ const isEmpty = (node, errorMsg) => {
             }
             else {
                   node.style.outline = '1px solid hsl(169, 82%, 27%)'
-                  node.style.border = '0'
+                  node.style.border = '1px solid hsl(169, 82%, 27%)'
             }
             return true
       }
@@ -105,7 +114,7 @@ const isValidExp = (regExp, node, errorMsg) => {
                   node.nextSibling.remove()
             }
             node.style.outline = '1px solid hsl(169, 82%, 27%)'
-            node.style.border = '0'
+            node.style.border = '0.5px solid hsl(169, 82%, 27%)'
             return true
       }
 }
@@ -157,7 +166,9 @@ contactForm.addEventListener('click', e => {
       isValid.push(isEmpty(message, defaultMsg))
       isValid.push(isEmpty(agreement, agreementErrorMsg))
 
-      console.log(isValid)
+      if(isValid.every(field => field === true)){
+            showAlert()
+      }
 
 })
 
