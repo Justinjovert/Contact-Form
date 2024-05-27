@@ -38,10 +38,11 @@ body {
 }
 
 .contact-form label {
-    margin: 10px 0 10px 0;
+    margin: 15px 0 10px 0;
     font-size: 16px;
     font-family: var(--font);
     color: var(--textColor);
+    font-weight: 400;
 }
 
 .contact-form input {
@@ -51,7 +52,7 @@ body {
     font-family: var(--font);
 }
 
-.contact-form input:focus {
+.contact-form input:focus, .contact-form input:hover {
     border: 1px solid hsl(169, 82%, 27%);
     outline: none;
 }
@@ -64,6 +65,7 @@ body {
     font-weight: 700;
     background-color: hsl(169, 82%, 27%);
     cursor: pointer;
+    margin-top: 30px;
 }
 
 .contact-form button:active {
@@ -92,10 +94,11 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px;
+    column-gap: 10px;
 }
 
 .query-option {
+    display: flex;
     border: 1px solid hsl(186, 15%, 59%);
     padding: 15px;
     box-sizing: border-box;
@@ -104,12 +107,18 @@ body {
 
     flex: 1 1 calc(50% - 10px);
     min-width: 250px;
+    margin: 5px 0 !important;
 }
 
-.query-option input, label{
+.query-option input, .query-option > label{
     cursor: pointer;
+    margin: 0;
 }
 
+
+.selected-query{
+    background-color: hsl(148, 38%, 91%);
+}
 
 .message-wrapper {
     display: flex;
@@ -134,11 +143,22 @@ body {
 
 .agreement {
     display: flex;
-    margin: 30px 0;
+    margin: 20px 0 0 0;
+    align-items: start;
 }
 
 .agreement input {
     margin-right: 20px;
+    cursor: pointer;
+}
+
+.agreement input:checked {
+    accent-color: hsl(169, 82%, 27%);
+}
+
+.agreement label{
+    cursor: pointer;
+    margin: 0;
 }
 
 .error-message{
