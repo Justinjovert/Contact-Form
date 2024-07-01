@@ -45,6 +45,8 @@ Users should be able to:
 
   I used flex and flexwrap, with a min-width of 250px, so that if both grow and shrinks together. Once it reaches its minimum width, it wraps and then grows to fill the remaining space. With this I do not need to use media queries, as it is responsive to all screen sizes. 
 
+  I also used a regular expression that was on my previous code, 30DaysOfJavaScript(Will repo soon™). Reused a function but needed to add some conditions for specific type of inputs. Only works because SPAN element is solely used as an error feedback. Need to redo conditions on larger and complicated forms.
+
 ### Built with
 
 - Semantic HTML5 markup
